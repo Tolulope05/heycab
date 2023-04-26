@@ -6,14 +6,12 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      body: Container(
-        child: Center(
-          child: Text(
-            "Tolulope Fakunle",
-            style: TextStyle(
-              color: Colors.black,
-            ),
+    return const Scaffold(
+      body: Center(
+        child: Text(
+          "Tolulope Fakunle",
+          style: TextStyle(
+            color: Colors.black,
           ),
         ),
       ),
