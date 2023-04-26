@@ -7,7 +7,16 @@ class HomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      body: Container(),
+      body: Container(
+        child: Center(
+          child: Text(
+            "Tolulope Fakunle",
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
