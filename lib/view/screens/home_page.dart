@@ -120,6 +120,7 @@ class HomePage extends ConsumerWidget {
                                     ),
                                   ),
                                   Container(
+                                    margin: const EdgeInsets.only(bottom: 10),
                                     padding: const EdgeInsets.symmetric(
                                       vertical: 15,
                                       horizontal: 25,
@@ -161,6 +162,39 @@ class HomePage extends ConsumerWidget {
                                         ),
                                         Image.asset(
                                           "assets/images/map-dymo.jpg",
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: const EdgeInsets.only(bottom: 10),
+                                    padding: const EdgeInsets.symmetric(
+                                      vertical: 15,
+                                      horizontal: 25,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xff1D1B1E),
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Image.asset(
+                                          "assets/images/linkedin.jpg",
+                                          width: 40,
+                                        ),
+                                        Image.asset(
+                                          "assets/images/dribble.jpg",
+                                          width: 40,
+                                        ),
+                                        Image.asset(
+                                          "assets/images/twitter.jpg",
+                                          width: 40,
+                                        ),
+                                        Image.asset(
+                                          "assets/images/instagram.jpg",
+                                          width: 40,
                                         ),
                                       ],
                                     ),
