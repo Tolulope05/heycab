@@ -8,6 +8,10 @@ class SearchMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(
+        bottom: 10,
+        left: 10,
+      ),
       padding: const EdgeInsets.symmetric(
         vertical: 5,
         horizontal: 10,
@@ -42,7 +46,7 @@ class SearchMenu extends StatelessWidget {
           const Icon(
             Icons.menu,
             color: Colors.white,
-            size: 30,
+            size: 24,
           ),
         ],
       ),
