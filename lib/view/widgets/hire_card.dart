@@ -11,7 +11,6 @@ class HireCard extends StatelessWidget {
         color: const Color(0xff1D1B1E),
         borderRadius: BorderRadius.circular(20),
       ),
-      // height: 100,
       child: Stack(
         children: [
           Text(
@@ -19,7 +18,8 @@ class HireCard extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w700,
-              fontSize: Theme.of(context).textTheme.headlineLarge!.fontSize,
+              fontSize:
+                  Theme.of(context).textTheme.headlineLarge!.fontSize! * 1.1,
             ),
           ),
           Positioned(
