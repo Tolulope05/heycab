@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../widgets/exp_card.dart';
 import '../widgets/hire_card.dart';
 
 class HomePage extends ConsumerWidget {
@@ -18,17 +19,37 @@ class HomePage extends ConsumerWidget {
                   children: [
                     const HireCard(),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Container(),
-                        Container(),
-                        Container(),
+                        ExperienceCarrd(
+                          title: "Years Experience",
+                          years: 2,
+                          bgColor: Colors.green.shade400,
+                          textColor: Colors.white,
+                        ),
+                        ExperienceCarrd(
+                          title: "Handled Projects",
+                          years: 54,
+                          bgColor: Colors.yellow.shade500,
+                          textColor: Colors.white,
+                        ),
+                        ExperienceCarrd(
+                          title: "Clients",
+                          years: 40,
+                          bgColor: Colors.red.shade400,
+                          textColor: Colors.white,
+                        ),
                       ],
                     )
                   ],
                 ),
+                Column(
+                  children: [],
+                )
               ],
-            ), // Column children[0]
-            Container(), // Column children[1]
+            ),
+            Container(),
           ],
         ));
   }

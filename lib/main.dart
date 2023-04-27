@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'Interview Test',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: "Inter",
       ),
       home: const HomePage(),
     );
