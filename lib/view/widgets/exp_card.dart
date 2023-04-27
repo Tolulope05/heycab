@@ -16,8 +16,8 @@ class ExperienceCarrd extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 120,
-        width: 120,
+        height: 150,
+        width: 140,
         margin: const EdgeInsets.all(5),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
