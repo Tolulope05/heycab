@@ -1,6 +1,6 @@
 # Interview
 
-A Challenge app UI interaction built in flutter.
+An interview app UI interaction built in flutter.
 
 ![HomePage](./pictures/interview.jpg)
 
