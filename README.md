@@ -14,6 +14,7 @@ An interview app UI interaction built in flutter.
 flutter run
 ```
 
-**Note:** Tolulope Fakunle
+**Developer:** Tolulope Fakunle
+**Email:** fakunletolulope05@gmail.com
 
 
