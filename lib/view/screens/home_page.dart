@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../widgets/exp_card.dart';
 import '../widgets/experience.dart';
 import '../widgets/hire_card.dart';
 import '../widgets/profile_section.dart';
@@ -154,7 +153,6 @@ class HomePage extends ConsumerWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
