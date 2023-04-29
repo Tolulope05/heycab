@@ -16,47 +16,68 @@ class HomePage extends ConsumerWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 10,
-            vertical: 10,
-          ),
-          child: Column(
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+        child: LayoutBuilder(builder: (context, constraints) {
+          if (constraints.maxWidth > 500) {
+            return Container(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10,
+                vertical: 10,
+              ),
+              child: Column(
                 children: [
-                  Flexible(
-                    child: Column(
-                      children: const [
-                        HireCard(),
-                        Experience(),
-                      ],
-                    ),
-                  ),
-                  Flexible(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: const [
-                        SearchMenu(),
-                        Flexible(
-                          child: ProfileSection(),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Flexible(
+                        child: Column(
+                          children: const [
+                            HireCard(),
+                            Experience(),
+                          ],
                         ),
-                      ],
-                    ),
-                  )
+                      ),
+                      Flexible(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: const [
+                            SearchMenu(),
+                            Flexible(
+                              child: ProfileSection(),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      UIPortfolioWidget(),
+                      AboutWidget(),
+                    ],
+                  ),
                 ],
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+            );
+          } else {
+            return Container(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10,
+                vertical: 10,
+              ),
+              child: Column(
                 children: const [
+                  SearchMenu(),
+                  ProfileSection(),
+                  HireCard(),
+                  Experience(),
                   UIPortfolioWidget(),
                   AboutWidget(),
                 ],
               ),
-            ],
-          ),
-        ),
+            );
+          }
+        }),
       ),
     );
   }

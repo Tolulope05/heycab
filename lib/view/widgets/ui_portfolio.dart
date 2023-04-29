@@ -58,21 +58,21 @@ class UIPortfolioWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(right: 8),
                 child: Image.asset(
                   "assets/images/portfolio-one.jpg",
                   width: 150,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(right: 8),
                 child: Image.asset(
                   "assets/images/portfolio-two.jpg",
                   width: 150,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(right: 8),
                 child: Image.asset(
                   "assets/images/portfolio-three.jpg",
                   width: 150,

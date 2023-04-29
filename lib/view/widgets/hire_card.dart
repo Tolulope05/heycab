@@ -7,8 +7,7 @@ class HireCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 20),
-      width: MediaQuery.of(context).size.width / 2,
-      // constraints: const BoxConstraints(minWidth: 300),
+      constraints: const BoxConstraints(minWidth: 300, maxWidth: 600),
       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
       decoration: BoxDecoration(
         color: const Color(0xff1D1B1E),

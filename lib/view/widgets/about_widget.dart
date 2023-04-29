@@ -14,8 +14,12 @@ class AboutWidget extends StatelessWidget {
         right: 10,
         left: 10,
       ),
-      width: MediaQuery.of(context).size.width * 0.4,
-      // height: double.maxFinite,
+      constraints: BoxConstraints.tight(
+        Size(
+          400,
+          MediaQuery.of(context).size.height * 0.37,
+        ),
+      ),
       padding: const EdgeInsets.symmetric(
         vertical: 15,
         horizontal: 25,
@@ -26,7 +30,6 @@ class AboutWidget extends StatelessWidget {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -50,9 +53,6 @@ class AboutWidget extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-          const SizedBox(
-            height: 10,
           ),
           const Flexible(
             child: Text(

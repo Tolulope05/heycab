@@ -22,6 +22,7 @@ class ProfileSection extends StatelessWidget {
           ),
           child: Image.asset(
             "assets/images/profile.jpg",
+            width: MediaQuery.of(context).size.width * 0.4,
           ),
         ),
         Flexible(
