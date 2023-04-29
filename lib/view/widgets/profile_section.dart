@@ -15,11 +15,11 @@ class ProfileSection extends StatelessWidget {
             right: 10,
             left: 10,
           ),
+          constraints: const BoxConstraints(maxWidth: 200),
           clipBehavior: Clip.hardEdge,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
           ),
-          width: MediaQuery.of(context).size.width / 4.5,
           child: Image.asset(
             "assets/images/profile.jpg",
           ),
