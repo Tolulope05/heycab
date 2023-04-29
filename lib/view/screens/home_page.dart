@@ -68,6 +68,7 @@ class HomePage extends ConsumerWidget {
               ],
             ),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   margin: const EdgeInsets.only(
@@ -101,12 +102,12 @@ class HomePage extends ConsumerWidget {
                                         .textTheme
                                         .bodyMedium!
                                         .fontSize! *
-                                    1.1,
+                                    1.4,
                               ),
                             ),
                             const Expanded(
-                                child:
-                                    SizedBox()), // Reason I gave parent constraint to the row
+                              child: SizedBox(),
+                            ), // Reason I gave parent constraint to the row
                             Text(
                               "See All",
                               style: TextStyle(
@@ -116,7 +117,7 @@ class HomePage extends ConsumerWidget {
                                         .textTheme
                                         .bodyMedium!
                                         .fontSize! *
-                                    1.1,
+                                    1.4,
                               ),
                             ),
                           ],
@@ -159,6 +160,7 @@ class HomePage extends ConsumerWidget {
                     left: 10,
                   ),
                   width: MediaQuery.of(context).size.width * 0.4,
+                  // height: double.maxFinite,
                   padding: const EdgeInsets.symmetric(
                     vertical: 15,
                     horizontal: 25,
@@ -176,7 +178,7 @@ class HomePage extends ConsumerWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "UI Portfolio",
+                            "About",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w700,
@@ -184,11 +186,11 @@ class HomePage extends ConsumerWidget {
                                       .textTheme
                                       .bodyMedium!
                                       .fontSize! *
-                                  1.1,
+                                  1.4,
                             ),
                           ),
                           Text(
-                            "See All",
+                            "Resume",
                             style: TextStyle(
                               color: const Color(0xFFA2A2A2),
                               fontWeight: FontWeight.w700,
@@ -196,7 +198,7 @@ class HomePage extends ConsumerWidget {
                                       .textTheme
                                       .bodyMedium!
                                       .fontSize! *
-                                  1.1,
+                                  1.4,
                             ),
                           ),
                         ],
