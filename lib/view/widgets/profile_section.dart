@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class ProfileSection extends StatelessWidget {
+import '../../model/response_model.dart';
+import '../../provider/user_provider.dart';
+
+class ProfileSection extends ConsumerWidget {
   const ProfileSection({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final AsyncValue<DummyData> userState = ref.watch(userStateProvider);
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -51,7 +56,7 @@ class ProfileSection extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Bami Sakti",
+                      userState.value?.userData?.username ?? "Loading...",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
@@ -90,7 +95,8 @@ class ProfileSection extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "Tanjung Pinang",
+                          userState.value?.userData?.location ??
+                              "Tanjung Pinang",
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w700,
