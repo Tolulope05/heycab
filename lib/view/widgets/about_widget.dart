@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class AboutWidget extends StatelessWidget {
+import '../../model/response_model.dart';
+import '../../provider/user_provider.dart';
+
+class AboutWidget extends ConsumerWidget {
   const AboutWidget({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final AsyncValue<DummyData> userState = ref.watch(userStateProvider);
     return Container(
       margin: const EdgeInsets.only(
         bottom: 10,
@@ -54,10 +59,10 @@ class AboutWidget extends StatelessWidget {
               ),
             ],
           ),
-          const Flexible(
+          Flexible(
             child: Text(
-              'I am a UI designer with a passion for creating intuitive and visually appealing user interfaces. I have a strong understanding of design principles and work closely with developers to bring my designs to life. I have had the opportunity to work with a variety of clients at a studio, and am always striving to improve my skills and stay up- to-date on the latest design trends.',
-              style: TextStyle(
+              userState.value?.userData?.about ?? "",
+              style: const TextStyle(
                 color: Color(0xFFA2A2A2),
               ),
               softWrap: true,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../model/response_model.dart';
+import '../../provider/user_provider.dart';
 import '../widgets/about_widget.dart';
 import '../widgets/experience.dart';
 import '../widgets/hire_card.dart';
@@ -13,6 +15,7 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final AsyncValue<DummyData> userState = ref.watch(userStateProvider);
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
