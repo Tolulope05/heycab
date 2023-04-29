@@ -51,6 +51,9 @@ class AboutWidget extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(
+            height: 10,
+          ),
           const Flexible(
             child: Text(
               'I am a UI designer with a passion for creating intuitive and visually appealing user interfaces. I have a strong understanding of design principles and work closely with developers to bring my designs to life. I have had the opportunity to work with a variety of clients at a studio, and am always striving to improve my skills and stay up- to-date on the latest design trends.',
