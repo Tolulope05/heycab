@@ -158,7 +158,7 @@ class HomePage extends ConsumerWidget {
                     right: 10,
                     left: 10,
                   ),
-                  width: MediaQuery.of(context).size.width * 0.354,
+                  width: MediaQuery.of(context).size.width * 0.4,
                   padding: const EdgeInsets.symmetric(
                     vertical: 15,
                     horizontal: 25,
